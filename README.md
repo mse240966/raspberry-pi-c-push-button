@@ -12,3 +12,5 @@ Press ENTER to quit
 ```
 
 ## Circuit
+
+![circuit](https://github.com/mse240966/raspberry-pi-c-push-button/blob/master/docs/pushButtonCircuit.png "Breadboard Circuit")
