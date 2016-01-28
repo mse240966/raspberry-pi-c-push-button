@@ -4,6 +4,8 @@ Another little C program. This time to have a go at software GPIO input with a p
 
 The code important to this little project is gpio/input.c, gpio/input.h and main.c.  This is where all the new GPIO input code lives.
 
+![pushbutton](https://github.com/mse240966/raspberry-pi-c-push-button/blob/master/docs/pushButton.jpg "Push Button")
+
 ## Example
 
 ```bash
