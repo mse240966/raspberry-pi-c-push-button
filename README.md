@@ -6,6 +6,12 @@ The code important to this little project is gpio/input.c, gpio/input.h and main
 
 ![pushbutton](https://github.com/mse240966/raspberry-pi-c-push-button/blob/master/docs/pushButton.jpg "Push Button")
 
+## How to clone (with GPIO sub module)
+
+```bash
+git clone --recursive https://github.com/mse240966/raspberry-pi-c-push-button.git
+```
+
 ## Example
 
 ```bash
