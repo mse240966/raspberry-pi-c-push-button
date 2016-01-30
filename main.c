@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <assert.h>
 #include <unistd.h>
-#include <pthread.h>
 
 #include "gpio/gpio.h"
 #include "gpio/input.h"
@@ -39,7 +38,7 @@ int main()
     };
 
     // Create input thread
-    returnStatus = pthread_create(&inputParameters.threadId, NULL, &inputPollGpioPin, (void*)&inputParameters);
+    returnStatus = gpioInputStart(&inputParameters);
     assert(returnStatus == EXIT_SUCCESS);
 
     // Key thread running until enter key pressed
@@ -47,9 +46,7 @@ int main()
     getchar();
 
     // Terminate input thread
-    inputParameters.terminate = true;
-
-    returnStatus = pthread_join(inputParameters.threadId, NULL);
+    returnStatus = gpioInputStop(&inputParameters);
     assert(returnStatus == EXIT_SUCCESS);
 
     // Tidy up
